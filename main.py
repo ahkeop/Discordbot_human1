@@ -27,7 +27,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content == '휴먼아 도움말':
-        embed = discord.Embed(color=0xff00, title="미먼봇 도움말", description="미먼봇은 단순 장난용으로 만들어진 챗봇입니다\n명령어 목록\n`휴먼아`\n`휴먼아 안녕`\n`휴먼아 ㅗㅗ`\n`휴먼아 와샌즈`\n`휴먼아 누나`", timestamp=message.created_at)
+        embed = discord.Embed(color=0xff00, title="미먼봇 도움말", description="미먼봇은 단순 장난용으로 만들어진 챗봇입니다\n명령어 목록\n`휴먼아`\n`휴먼아 안녕`\n`휴먼아 ㅗㅗ`\n`휴먼아 와샌즈`\n`휴먼아 누나`\n휴먼아 소감은", timestamp=message.created_at)
         embed.set_footer(text=message.author, icon_url=message.author.avatar_url)
         await message.channel.send(embed=embed)
 
@@ -41,6 +41,8 @@ async def on_message(message):
         await message.channel.send('나죽어')
     if message.content == '휴먼아 와샌즈':
         await message.channel.send('아시는구나!!')
+    if message.content == '휴먼아 소감은':
+        await message.channel.send('야 봇지워, 이씨 지우라고!!')
 
 acess_token = os.environ["BOT.TOKEN"]
 client.run(acess_token)
